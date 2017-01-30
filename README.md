@@ -1,6 +1,6 @@
 Requires:
-NPM
-Gulp
+ NPM
+ Gulp
 
 
 Installation:
@@ -9,7 +9,7 @@ npm install
 ```
 
 Build:
----
+```
 gulp
----
+```
 
