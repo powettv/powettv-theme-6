@@ -1,0 +1,76 @@
+// Grid Utilities
+
+$grid-module: 'grid';
+
+.#{$grid-module} {
+
+	&__row {
+		margin-bottom: spacer(px, large);
+		margin-bottom: spacer(rem, large);
+		@extend %clearfix;
+	}
+
+	&__nested {
+		// to make sure that susy styles are overridden at all breakpoints
+		// we use important.
+		padding-left: 0!important;
+		padding-right: 0!important;
+		&--left {
+			padding-left: 0!important;
+		}
+		&--right {
+			padding-right: 0!important;
+		}
+	}
+
+	// Static Grids
+	// -------------
+	&__8-static {
+		@include span(8 of 12);
+	}
+
+	&__4-static {
+		@include span(4 of 12);
+	}
+
+	// Default Grids
+	// --------------
+	&__12 {
+		@include span(full break);
+	}
+
+	&__4 {
+		@include span(full);
+	}
+
+	&__6 {
+		@include span(full);
+	}
+
+	&__8 {
+		@include span(full);
+	}
+}
+
+// Mid Breakpoint
+// ---------------
+
+@include media-query(mid) {
+	.#{$grid-module} {
+		&__row {
+			@include span(10 of 12);
+		}
+
+		&__4 {
+			@include span(4 of 12);
+		}
+
+		&__6 {
+			@include span(6 of 12);
+		}
+
+		&__8 {
+			@include span(8 of 12);
+		}
+	}
+}

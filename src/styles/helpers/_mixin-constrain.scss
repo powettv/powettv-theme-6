@@ -1,0 +1,24 @@
+// Constrain
+// --------------------------
+// * FOR: Constraining width of content at mobile and tablet
+// * WHY: Not all elements are 100% wide
+// * USE: @include constrain;
+
+
+@mixin constrain {
+	width: 84.375%; // 270px / 320px
+	margin-left: auto;
+	margin-right: auto;
+	@media screen and (min-width: $mid-breakpoint) {
+		width: 94%;
+	}
+	@media screen and (mid-width: $x-large-breakpoint) {
+		width: 100%;
+	}
+}
+
+@mixin unconstrain {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}

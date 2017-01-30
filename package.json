@@ -1,0 +1,16 @@
+{
+  "name": "powettv",
+  "version": "6.0.0",
+  "description": "WordPress theme for Powet.TV",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "crazyjaco",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}

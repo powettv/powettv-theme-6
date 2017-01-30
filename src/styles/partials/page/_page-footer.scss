@@ -1,0 +1,35 @@
+// Page Footer
+
+$module-name: 'page-footer';
+
+.#{$module-name} {
+	height: 50px;
+	width: 100%;
+	@include linear-gradient( to bottom, 
+		#7f7f7f 1px, 
+		color(gray, xx-dark) 1px,
+		color(gray, xx-dark) 2px,
+		color(gray, mid-dark) 2px,
+		color(black)
+	);
+
+	&__content {
+		@include constrain;
+		max-width: $site-max-width;
+		padding: spacer(px, large) spacer(px, mid);
+		padding: spacer(rem, large) spacer(rem, mid);
+	}
+// gradient
+// 	1 px across of #7f7f7f;
+// 	1 px across of #333333;
+// 	#474747 -> #000000
+
+
+	&__text {
+		@include font-scale(xxx-small);
+		text-align: center;
+		margin-top: spacer(px, base);
+		margin-top: spacer(rem, base);
+		color: color(white);
+	}
+}

@@ -1,0 +1,35 @@
+// Media Query
+// --------------------------------------
+// FOR: Writing css specific to certain breakpoints.
+// WHY: Standardizing breakpoint sizes.
+// USE: #include media-query(x-large) {...};
+
+@mixin media-query($breakpoint) {
+	
+	@if $breakpoint == x-large {
+		@media (min-width: $x-large-breakpoint) { @content; }
+	}
+	@else if $breakpoint == large {
+		@media (min-width: $large-breakpoint) { @content; }
+	}
+	@else if $breakpoint == mid {
+		@media (min-width: $mid-breakpoint) { @content; }
+	}
+	@else if $breakpoint == small {
+		@media (min-width: $small-breakpoint) { @content; }
+	}
+	@else if $breakpoint == x-small {
+		@media (min-width: $x-small-breakpoint) { @content; }
+	}
+	@else if round($breakpoint) == $breakpoint {
+		@media (min-width: #{breakpoint}px) { @content; }
+	}
+}
+
+@mixin media-query--retina {
+	@media only screen and (-webkit-min-device-pixel-ration: 1.3),
+	only screen and (-o-min-device-pixel-ration: 13/10),
+	only screen and (min-resolution: 120dpi) {
+		@content;
+	}
+}

@@ -1,0 +1,61 @@
+// Brings in all partials to generate a single css file
+// This file should only contain @import rules
+// Dependencies should be listed
+
+// ---------------
+// Reset styles
+// ---------------
+
+// ---------------
+// @font-face rules
+// ---------------
+
+// ---------------
+// Base SCSS
+// ---------------
+@import 'partials/base';
+
+// ---------------
+// Element default styles
+// ---------------
+
+// ---------------
+// Global Styles
+// ---------------
+
+// ---------------
+// Icons
+// ---------------
+
+// ---------------
+// Page - Masthead styles
+// ---------------
+
+// ---------------
+// Page - Layout styles
+// ---------------
+
+// ---------------
+// Page - Module Styles
+// * Dependencies: base
+// ---------------
+
+// ---------------
+// Page - Footer Styles
+// * Dependencies: base
+// ---------------
+@import 'partials/page/page-footer';
+
+// ---------------
+// Content Styles
+// * Dependencies: base
+// ---------------
+
+//content-social
+//content-header
+//content-byline
+//content-text
+//content-tags
+//content-footer
+//content-gallery
+//content-media
