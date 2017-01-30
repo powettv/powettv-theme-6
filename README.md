@@ -4,9 +4,9 @@ Gulp
 
 
 Installation:
----
+```
 npm install
----
+```
 
 Build:
 ---
