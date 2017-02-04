@@ -22,7 +22,7 @@ $nav-bar-height: 40px;
 	// This is the menu bar at the top of the page.
 	&__list {
 		list-style: none;
-		display: inline-block;
+		display: none;
 		padding: 0;
 		margin: auto 0;
 
@@ -133,4 +133,16 @@ $nav-bar-height: 40px;
 			}
 		}
 	}
+
+	@include media-query( mid ) {
+		// This is the menu bar at the top of the page.
+		&__list {
+			display: inline-block;
+		}
+
+		&__burger-button {
+			display: none;
+		}
+	}
+
 }

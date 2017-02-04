@@ -15,3 +15,6 @@ require_once( POWETTV_PATH . '/inc/theme.php' );
 
 // This is where the assets actually get loaded.
 require_once( POWETTV_PATH . '/inc/assets.php' );
+
+// Template related helper functions.
+require_once( POWETTV_PATH . '/inc/template-tags.php' );

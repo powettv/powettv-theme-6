@@ -39,6 +39,6 @@ $off_canvas_nav = wp_nav_menu( array(
 			<span class="page-nav__burger-button-icon-line"></span>
 		</label>
 		<?php echo wp_kses_post( $off_canvas_nav ); ?>
-		<?php // echo wp_kses_post( $header_nav ); ?>
+		<?php echo wp_kses_post( $header_nav ); ?>
 	</div>
 
