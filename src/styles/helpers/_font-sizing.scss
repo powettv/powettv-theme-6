@@ -99,8 +99,8 @@ $font-default: $font-effra;
 }
 
 // calc-line-height
-@function calc-font-size($set, $family:$font-default) {
-	@return _fontset-feature(line-height, $family, $set);
+@function calc-line-height($set, $family:$font-default) {
+    @return _fontset-feature(line-height, $family, $set);
 }
 
 // Mixins

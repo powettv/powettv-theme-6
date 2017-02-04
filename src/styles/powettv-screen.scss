@@ -5,6 +5,7 @@
 // ---------------
 // Reset styles
 // ---------------
+@import 'helpers/resets';
 
 // ---------------
 // @font-face rules
@@ -44,6 +45,8 @@
 // Page - Footer Styles
 // * Dependencies: base
 // ---------------
+@import 'partials/page/page-header';
+@import 'partials/page/page-nav';
 @import 'partials/page/page-footer';
 
 // ---------------

@@ -1,0 +1,136 @@
+// Page Nav
+
+// We are using a pure css mobile menu technique with accessiblity in mind.
+// SEE: http://codepen.io/jonraedeke/pen/WRwJQX?editors=1100
+
+$module-name: 'page-nav';
+$off-canvas-menu-width: 200px;
+$nav-bar-height: 40px;
+
+.#{$module-name} {
+	@include linear-gradient( to bottom, 
+		#7f7f7f 1px, 
+		color(gray, xx-dark) 1px,
+		color(gray, xx-dark) 2px,
+		color(gray, mid-dark) 2px,
+		color(black)
+	);
+	color: color(white);
+	height: $nav-bar-height;
+	@include font-scale(small);
+
+	// This is the menu bar at the top of the page.
+	&__list {
+		list-style: none;
+		display: inline-block;
+		padding: 0;
+		margin: auto 0;
+
+		.menu-item {
+			display: inline-block;
+			padding-left: spacer(px, small);
+			padding-left: spacer(rem, small);
+
+			a {
+				color: color(white);
+				text-transform: uppercase;
+				text-decoration: none;
+			}
+		}
+	}
+
+	// This is our mobile off canvas menu.
+	&__off-canvas-list {
+		background-color: color(gray);
+		position: absolute;
+		width: $off-canvas-menu-width;
+		z-index: z-index(attic);
+		right: -1 * $off-canvas-menu-width;
+		list-style: none;
+		padding: 0;
+		transition: transform .6s;
+		top: $nav-bar-height;
+		margin: 0;
+
+		.menu-item {
+			display: block;
+			padding-left: spacer(px, small);
+			padding-left: spacer(rem, small);
+
+			a {
+				color: color(white);
+				text-transform: uppercase;
+				text-decoration: none;
+			}
+		}
+	}
+
+	// Checkbox element.
+	&__off-canvas-list-toggle {
+		// Hide the checkbox itself.
+		display: none;
+		visibility: hidden;
+
+		&:checked {
+			// Move the off-canvas menu into the viewport.
+			~ .page-nav__off-canvas-list {
+				transform: translateX( -1 * $off-canvas-menu-width);
+			}
+
+			// Hamburger/Trigram for Heaven button animation and transform.
+			~ label .page-nav__burger-button-icon-line:first-child {
+				top: 0px;
+				width: 27px;
+				transform: translateX(-8px) rotate(-45deg) translateY(12px);
+			}
+
+			~ label .page-nav__burger-button-icon-line:nth-child(2) {
+				opacity: 0;
+			}
+
+			~ label .page-nav__burger-button-icon-line:nth-child(3) {
+				top: 14px;
+				width: 27px;
+				transform: translateX(-5px) rotate(45deg) translateY(-8px);
+			}
+
+		}
+	}
+
+	// Label element for checkbox. Basically the Burger Button.
+	&__burger-button {
+		display: block;
+		position: absolute;
+		top: ($nav-bar-height - 20px) / 2;
+		right: 13px;
+		height: 27px;
+		width: 27px;
+		cursor: pointer;
+		text-indent: -9999px; //Hide the label
+
+		// Hamburger/Trigram button lines
+		&-icon-line {
+			position: absolute;
+			display: block;
+			background: color(white);
+			width: 27px;
+			height: .2rem;
+			border-radius: .2rem;
+			left: 0;
+			text-indent: 0;
+			transition: all .6s cubic-bezier(.5, .1, 0, 1.2);
+
+			&:first-child {
+				top: 0;
+			}
+
+			&:nth-child(2) {
+				top: 8px;
+			}
+
+			&:nth-child(3) {
+				top: 16px;
+			}
+		}
+	}
+}

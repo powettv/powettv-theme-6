@@ -17,6 +17,9 @@
 
 </head>
 <body <?php body_class(); ?> >
+	<?php
+		get_template_part( 'partials/page', 'header' );
+	?>
 <!--
 	<table cellpadding="0" cellspacing="0" width="1000px">
 		<tr>

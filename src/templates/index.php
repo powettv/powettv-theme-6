@@ -11,8 +11,6 @@
  * @package powettv
  */
 
-get_header(); ?>
-
-STUFF GOES HERE.
-
-<?php get_footer();
+get_header();
+get_template_part( 'partials/post', 'loop' );
+get_footer();
