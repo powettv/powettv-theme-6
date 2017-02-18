@@ -22,7 +22,9 @@
 
 // ---------------
 // Global Styles
+// * Depedencies: base
 // ---------------
+@import 'partials/global';
 
 // ---------------
 // Icons
@@ -47,13 +49,14 @@
 // ---------------
 @import 'partials/page/page-header';
 @import 'partials/page/page-nav';
+@import 'partials/page/page-content';
 @import 'partials/page/page-footer';
 
 // ---------------
 // Content Styles
 // * Dependencies: base
 // ---------------
-
+@import 'partials/content/article';
 //content-social
 //content-header
 //content-byline

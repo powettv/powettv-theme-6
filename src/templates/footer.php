@@ -6,7 +6,6 @@
  */
 
 ?>
-
 		</div> <!-- .content-container -->
 
 		<?php get_template_part( 'partials/page', 'footer' ); ?>

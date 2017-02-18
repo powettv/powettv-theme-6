@@ -1,0 +1,14 @@
+// Globals
+
+.site-container {
+	// This will prevent the horizontal scrollbar from appearing
+	// due to the off screen menu for mobile.
+	overflow: hidden;
+	position: relative;
+	@include font-scale(base);
+	background-image: url(../images/background.jpg);
+}
+
+.hidden {
+	display: none;
+}

@@ -1,0 +1,19 @@
+// Content Styles
+
+$page-content: 'content-container';
+
+.grid {
+	@include container(100%);
+}
+
+.#{$page-content} {
+	margin: 0 auto;
+	max-width: $site-max-width;
+	width: 100%;
+	@extend %clearfix;
+
+	.grid__row {
+		background-image: none;
+		background-color: color(white);
+	}
+}

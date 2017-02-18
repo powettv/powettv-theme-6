@@ -13,20 +13,25 @@
 // SEE: http://erskinedesign.com/blog/setting-typographic-scale-with-sass-maps/
 // USE: `@include font-scale(x-large);
 
+@font-face {
+	font-family: 'Open Sans', sans-serif;
+	src: url('https://fonts.googleapis.com/css?family=Open+Sans');
+}
 // Variables
 
 // Font Stacks
 $font-face-effra: "Effra, Helvetica, Arial, Verdana, sans-serif";
+$font-face-trebuchet: "Trebuchet MS, Arial, sans-serif";
 $font-face-helvetica: "Helvetica, Arial, Verdana, sans-serif";
-
+$font-face-open-sans: "Open Sans, Helvetica, Arial, sans-serif";
 // Maps
 
 // Separate fonts out for better control; different sizes and line height 
 // rations look better for different fonts.
 
 // Effra
-$font-effra: (
-	stack: $font-face-effra,
+$font-open-sans: (
+	stack: $font-face-open-sans,
 	xxx-small: (
 		font-size: 0.8333, // 13px
 		line-height: 1.5
@@ -72,7 +77,7 @@ $font-effra: (
 // Functions
 
 // Sets default font
-$font-default: $font-effra;
+$font-default: $font-open-sans;
 
 // fontset-feature
 // Pulls information from the map above. Called by other functions. the

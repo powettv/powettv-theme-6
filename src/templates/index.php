@@ -12,5 +12,16 @@
  */
 
 get_header();
-get_template_part( 'partials/post', 'loop' );
+?>
+			<div class="grid">
+				<div class="grid__row">
+					<div class="grid__8">
+						<?php get_template_part( 'partials/post', 'loop' ); ?>
+					</div>
+					<div class="grid__4"
+						<?php get_template_part( 'partials/sidebar', 'right' ); ?>
+					</div>
+				</div>
+			</div>
+<?php
 get_footer();
