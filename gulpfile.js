@@ -45,13 +45,14 @@ gulp.task('templates', function() {
 //         .pipe(gulp.dest('dist'));
 // });
 
-// gulp.task('images', function() {
-//     return gulp.src('src/images/**/*.*')
-//         .pipe(gulp.dest('dist/images'));
-// });
+// Images
+gulp.task('images', function() {
+    return gulp.src('src/images/**/*.*')
+        .pipe(gulp.dest('dist/images'));
+});
 
 gulp.task('default', function() {
-    gulp.start('templates', 'sass');
+    gulp.start('templates', 'sass', 'images');
 //    gulp.start('clean');
 });
 
