@@ -31,6 +31,8 @@ $off_canvas_nav = wp_nav_menu( array(
 
 ?>
 	<div class="page-nav">
+		<div class="page-nav__logo-mascot"></div>
+		<div class="page-nav__logo-site-title"></div>
 		<input type="checkbox" id="page-nav__off-canvas-list-toggle" class="page-nav__off-canvas-list-toggle" aria-hidden="true" />
 		<label for="page-nav__off-canvas-list-toggle" class="page-nav__burger-button" aria-hidden="true">
 			Expand the menu
