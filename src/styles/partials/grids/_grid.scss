@@ -8,9 +8,6 @@ $grid-module: 'grid';
 	max-width: 100%;
 
 	&__row {
-		// Adds a little space before the footer. (for the content)
-		padding-bottom: spacer(px, large);
-		padding-bottom: spacer(rem, large);
 		@extend %clearfix;
 	}
 
