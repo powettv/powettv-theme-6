@@ -3,9 +3,23 @@
 $module-name: 'page-header';
 
 .#{$module-name} {
+	// This makes the header not span across the whole way beyond the max-width.
+	max-width: $site-max-width;
+	margin: 0 auto;
+	width: 100%;
 
 	.page-nav {
 		list-style: none;
 	}
 
+}
+
+@include media-query(large) {
+	.#{$module-name} {
+		// styles to make the top shift down and look more
+		// like the old powet theme at desktop and above.
+		// Nav Bar is 45px tall + this adds 30px. Logo can be total of 75px tall.
+		margin-top: spacer(px, xx-large);
+		margin-top: spacer(rem, xx-large);
+	}
 }
