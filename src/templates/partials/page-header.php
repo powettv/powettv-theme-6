@@ -8,7 +8,11 @@
 ?>
 
 <header class="page-header">
-	<?php
-		get_template_part( 'partials/page', 'nav' );
-	?>
+	<div class="grid">
+		<div class="grid__row">
+			<?php
+				get_template_part( 'partials/page', 'nav' );
+			?>
+		</div>
+	</div>
 </header>
